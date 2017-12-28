@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config-server
+    
+server:
+  port: 8762
+    
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sai9631/ConfigTest
+      
+      discovery:
+        enabled: true
+
+  profiles:
+    active: developement
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
