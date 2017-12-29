@@ -2,9 +2,7 @@ spring:
   application:
     name: config-server
     
-server:
-  port: 8762
-    
+   
   cloud:
     config:
       server:
@@ -22,6 +20,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url: 
-      default-zone: http://eureka-server1-sample-boot-microserv.1d35.starter-us-east-1.openshiftapps.com
+      default-zone: http://eureka-server1-sample-boot-microserv.1d35.starter-us-east-1.openshiftapps.com/
   instance:
     hostname: localhost
